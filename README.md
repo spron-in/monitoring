@@ -16,6 +16,7 @@ Get qtype stats from bind9 DNS. Usage: `python bind_stats.py %QTYPE%`
 
 `
 $ python bind_stats.py AAAA
+
 198556650
 `
 
