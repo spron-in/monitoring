@@ -15,7 +15,7 @@ User should be in sudoers with permissions for vtysh. Smth like that:
 Get qtype stats from bind9 DNS. Usage: `python bind_stats.py %QTYPE%`
 
 `
-# python bind_stats.py AAAA
+$ python bind_stats.py AAAA
 198556650
 `
 
