@@ -4,7 +4,13 @@ Some useful scripts for monitoring
 
 ## check_bgp.pl
 
-Monitor BGP in Quagga routing daemon. Usage: `perl check_bgp.pl`
+Monitor BGP in Quagga routing daemon. 
+
+### Usage
+
+`perl check_bgp.pl`
+
+### Requirements
 
 User should be in sudoers with permissions for vtysh. Smth like that:
 
@@ -12,7 +18,11 @@ User should be in sudoers with permissions for vtysh. Smth like that:
 
 ## bind_stats.py
 
-Get qtype stats from bind9 DNS. Usage: `python bind_stats.py %QTYPE%`
+Get qtype stats from bind9 DNS. 
+
+### Usage
+
+`python bind_stats.py %QTYPE%`
 
 `
 $ python bind_stats.py AAAA
@@ -20,7 +30,11 @@ $ python bind_stats.py AAAA
 198556650
 `
 
-Of course bind9 should be configured with json support. We hate XML, right? In bind config do not forget to add smth like:
+### Requirements
+
+1. pip install requests
+
+1. Of course bind9 should be configured with json support. We hate XML, right? In bind config do not forget to add smth like:
 
 `
 statistics-channels {
