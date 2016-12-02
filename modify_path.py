@@ -18,8 +18,7 @@ def modify_path(replace_ip=None, hops=0):
 
         return
 
-    def send_time_exceed(src_ip=None, dst_ip=None, replace_ip=None, icmp_id=None,
-icmp_seq=None):
+    def send_time_exceed(src_ip=None, dst_ip=None, replace_ip=None, icmp_id=None, icmp_seq=None):
 
         ip = IPv6(src=replace_ip,dst=dst_ip)
         exceed = ICMPv6TimeExceeded(code=0)
@@ -68,5 +67,4 @@ if __name__ == "__main__":
         sys.exit()
 
 
-    sniff(iface=iface, filter="icmp6 and ip6[40] == 128",
-prn=modify_path(replace_ip, hops))
+    sniff(iface=iface, filter="icmp6 and ip6[40] == 128", prn=modify_path(replace_ip, hops))
